@@ -28,3 +28,26 @@
 .information button:hover {
   cursor: pointer;
 }
+
+.empDetails {
+  width: 600px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 8px;
+  /* align-items: left; */
+}
+
+.empDetails button {
+  width: auto;
+}
+
+/* .update {
+  position: relative;
+  background-color: gainsboro;
+  height: 50px;
+  width: 280px;
+  align-items: left;
+} */

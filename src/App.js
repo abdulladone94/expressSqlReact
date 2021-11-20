@@ -84,10 +84,20 @@ function App() {
           <button onClick={showEmp}>Show Employee Details</button>
           {callEmp.map((val, key) => {
             return (
-              <div>
-                <p>
-                  Name: {val.name} Position: {val.position} Wages: {val.wage}
-                </p>
+              <div className="empDetails">
+                <div>
+                  <h3>Name: {val.name} </h3>
+                  <h3>Position: {val.position} </h3>
+                  <h3>Wages: {val.wage} </h3>
+                </div>
+                <div>
+                  <input type="text" />
+                  <button>Update</button> <br />
+                  <input type="text" />
+                  <button>Update</button> <br />
+                  <input type="text" />
+                  <button>Update</button>
+                </div>
               </div>
             );
           })}
