@@ -91,11 +91,11 @@ function App() {
                   <h3>Wages: {val.wage} </h3>
                 </div>
                 <div>
-                  <input type="text" />
+                  <input type="text" placeholder="Edit your Name" />
                   <button>Update</button> <br />
-                  <input type="text" />
+                  <input type="text" placeholder="Edit your Position" />
                   <button>Update</button> <br />
-                  <input type="text" />
+                  <input type="number" placeholder="Edit your Wage" />
                   <button>Update</button>
                 </div>
               </div>
