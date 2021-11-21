@@ -8,6 +8,7 @@ function App() {
   const [country, setCountry] = useState("");
   const [position, setPosition] = useState("");
   const [wage, setWage] = useState("0");
+  const [editName, setEditName] = useState("");
 
   const [callEmp, setCallEmp] = useState([]);
 
@@ -36,6 +37,14 @@ function App() {
     Axios.get("http://localhost:3001/employee").then((response) => {
       setCallEmp(response.data);
     });
+  };
+
+  const handleName = (id) => {
+    Axios.put("http://localhost:3001/update", { name: editName, id: id }).then(
+      (response) => {
+        alert("Updated");
+      }
+    );
   };
 
   return (
@@ -91,8 +100,21 @@ function App() {
                   <h3>Wages: {val.wage} </h3>
                 </div>
                 <div>
-                  <input type="text" placeholder="Edit your Name" />
-                  <button>Update</button> <br />
+                  <input
+                    type="text"
+                    placeholder="Edit your Name"
+                    onChange={(e) => {
+                      setEditName(e.target.value);
+                    }}
+                  />
+                  <button
+                    onClick={() => {
+                      handleName(val.id);
+                    }}
+                  >
+                    Update
+                  </button>{" "}
+                  <br />
                   <input type="text" placeholder="Edit your Position" />
                   <button>Update</button> <br />
                   <input type="number" placeholder="Edit your Wage" />
